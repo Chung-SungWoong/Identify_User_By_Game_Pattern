@@ -1,8 +1,9 @@
 # Identify_User_By_Game_Pattern
 This project has been started from the idea that is it possible to identify the user from the gaming pattern
 
+이 프로젝트는 플레이어의 게임 습관 혹은 게임 패턴으로 본인 확인이 가능한지에 대한 궁금증으로 시작하게 되었습니다.
 
-Korea and Japanese descriptions are followed by the English.
+Korean and Japanese descriptions are followed by the English.
 
 
 ## Problem:
@@ -18,6 +19,10 @@ However, there are many approaches for finding and blocking the hacks and bots.
 But, relatively few number of detecting the unauthenticated user such as the act called boosting.
 
 The necessity of second authentication is emerging.
+
+날이 갈수록 사람들에게 게임은 단순한 유희를 넘는 의미를 가지며 또 하나의 세상으로 여겨지기도 한다.
+
+게이머들은 게임은 
 
 
 ## Suggested Approach:
