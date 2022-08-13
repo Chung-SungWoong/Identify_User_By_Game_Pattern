@@ -1,9 +1,9 @@
 # Identify_User_By_Game_Pattern
 This project has been started from the idea that is it possible to identify the user from the gaming pattern
 
-이 프로젝트는 플레이어의 게임 습관 혹은 게임 패턴으로 본인 확인이 가능한지에 대한 궁금증으로 시작하게 되었습니다.
-
 Korean and Japanese descriptions are followed by the English.
+
+이 프로젝트는 플레이어의 게임 습관 혹은 게임 패턴으로 본인 확인이 가능한지에 대한 궁금증으로 시작하였습니다.
 
 
 ## Problem:
@@ -20,9 +20,13 @@ But, relatively few number of detecting the unauthenticated user such as the act
 
 The necessity of second authentication is emerging.
 
-날이 갈수록 사람들에게 게임은 단순한 유희를 넘는 의미를 가지며 또 하나의 세상으로 여겨지기도 한다.
+날이 갈수록 게임은 사람들에게 단순한 유희를 넘는 의미를 가지며 또 하나의 세상으로 여겨지기도 합니다.
 
-게이머들은 게임은 
+게이머들은 특히 게임의 공평성을 매우 중요하게 생각해 게임의 공평성을 해치는 행위인 봇, 핵, 혹은 대리 (게임을 다른 사람이 대신 해주는 행위)같은 행위에 분노를 느끼기도 합니다.
+
+그러나 상대적으로 핵과 봇을 잡는 기술은 많은 발전과 여러 방식이 있지만 대리를 적발하는 방식은 아직까지 미흡한 경우가 많습니다.
+
+대리 행위를 방지하기 위한 이중 인증의 필요가 늘어가고 있습니다.
 
 
 ## Suggested Approach:
@@ -35,6 +39,10 @@ Possible to certify the user
 
 - without interruption, awareness, and giving stress.
 
+여기서 제안하는 방식은 주된 인증 방식이 아닌 본인 인증을 보완하는 시스템으로 게임 유저의 행동적 측면을 측정(생체 측정)하여 게임중 또 다른 장비나 요구없이 플레이어를 확인하는 것입니다.
+
+- 플레이어에게 최대한의 방해, 인식, 혹은 스트레스를 줄이는 것이 중요합니다.
+
 
 ## The diagram of the idea
 
@@ -44,15 +52,15 @@ Possible to certify the user
 
 ## Factors to be measured (and for future study):
 
-1. Reaction Time
+1. Reaction Time  반응 속도
 
-2. Accuracy
+2. Accuracy  정확도
 
-(3). Click per minute
+(3). Click per minute  매분마다의 클릭 숫자
 
-(4). Key settting
+(4). Keyboard settting  키보드 세팅
 
-(5). Social activity
+(5). Social activity  게임 내에서의 사회적 활동
 
 
 ## Data Flow Diagram:
@@ -73,6 +81,12 @@ Self Organizing Map (SOM)
 
 * Display high dimensional dataset into 2-dimensional space
 
+자기조직화 지도 (SOM)
+
+* 비지도 학습을 이용한 인공신경망 중 하나
+
+* 2차원 공간에 고차원 데이터 세트 표시 가능
+
 
 <img width="438" alt="스크린샷 2022-08-11 오후 8 19 18" src="https://user-images.githubusercontent.com/90700648/184122148-6a1b9bf1-8d78-4e29-a43f-6f9fb6c9ee39.png">
 
@@ -80,7 +94,12 @@ Self Organizing Map (SOM)
 
 ## Experimentation (1)
 * Data collection
+
 ** Simple click game by using Processing
+
+* 데이터 수집
+
+** 프로세싱을 이용한 간단한 정확도 연습 게임 
 
 
 <img width="390" alt="스크린샷 2022-08-11 오후 8 20 21" src="https://user-images.githubusercontent.com/90700648/184122341-087a6645-e6c0-49fd-872d-bfd0d9f9a52f.png">
@@ -112,6 +131,18 @@ Self Organizing Map (SOM)
 -- 0.1 neighbor width
 
 
+* 군집화
+
+- 유저별로 수집한 데이터를 정리
+
+- 3명의 유저에게서 200번의 게임 플레이, 총 2000번의 반응 속도, 정확도 기록
+
+- 'Living for SOM' 이라는 이름의 프로그램 사용
+
+- 40번의 반복, 0.6 학습률, 0.1의 폭을 사용
+
+
+
 ## Result
 
 
@@ -132,3 +163,17 @@ Self Organizing Map (SOM)
 - One or two behavioral aspects are not enough to be biometric authentication
 
 -- Need more behavioral aspects to consider
+
+
+- SOM은 데이터의 집합을 클러스터링 하여 구분하는데 강점이 있다
+
+-- 하지만 유저 인증을 가능하게 할 정도의 정확성을 보여주지 못함
+
+-- 다른 기술이나 인풋이 필요할 것으로 보임
+
+-- 클러스터의 바운더리를 어떻게 확정할 것인지에 관한 자세한 연구 필요
+
+
+- 하나 혹은 두개의 행동적 측면은 생체 인식으로는 부족한면을 보인다
+
+-- 다른 추가적 행동적 측면이 필요할 것으로 생각됨
