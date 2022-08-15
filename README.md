@@ -3,7 +3,9 @@ This project has been started from the idea that is it possible to identify the 
 
 Korean and Japanese descriptions are followed by the English.
 
+
 이 프로젝트는 플레이어의 게임 습관 혹은 게임 패턴으로 본인 확인이 가능한지에 대한 궁금증으로 시작하였습니다.
+
 
 このプロジェクトは、プレイヤーのゲーム習慣またはゲームパターンで本人確認が可能かどうかの疑問から始まりました。
 
@@ -22,6 +24,7 @@ But, relatively few number of detecting the unauthenticated user such as the act
 
 The necessity of second authentication is emerging.
 
+
 날이 갈수록 게임은 사람들에게 단순한 유희를 넘는 의미를 가지며 또 하나의 세상으로 여겨지기도 합니다.
 
 게이머들은 특히 게임의 공평성을 매우 중요하게 생각해 게임의 공평성을 해치는 행위인 봇, 핵, 혹은 대리 (게임을 다른 사람이 대신 해주는 행위)같은 행위에 분노를 느끼기도 합니다.
@@ -29,6 +32,7 @@ The necessity of second authentication is emerging.
 그러나 상대적으로 핵과 봇을 잡는 기술은 많은 발전과 여러 방식이 있지만 대리를 적발하는 방식은 아직까지 미흡한 경우가 많습니다.
 
 대리 행위를 방지하기 위한 이중 인증의 필요가 늘어가고 있습니다.
+
 
 最近、ゲームは人に単純な遊戯を越える意味を持ち、もう一つの世の中と見なされることもあります。
 
@@ -49,9 +53,11 @@ Possible to certify the user
 
 - without interruption, awareness, and giving stress.
 
+
 여기서 제안하는 방식은 주된 인증 방식이 아닌 본인 인증을 보완하는 시스템으로 게임 유저의 행동적 측면을 측정(생체 측정)하여 게임중 또 다른 장비나 요구없이 플레이어를 확인하는 것입니다.
 
 - 플레이어에게 최대한의 방해, 인식, 혹은 스트레스를 줄이는 것이 중요합니다.
+
 
 提案する方法は主な認証方式ではなく本人認証を補完するシステムでゲームユーザーの行動的側面を測定（生体測定）してゲーム中他の装備や要求なしにゲームプレイヤーを確認することです
 
@@ -96,11 +102,13 @@ Self Organizing Map (SOM)
 
 * Display high dimensional dataset into 2-dimensional space
 
+
 자기조직화 지도 (SOM)
 
 * 비지도 학습을 이용한 인공신경망 중 하나
 
 * 2차원 공간에 고차원 데이터 세트 표시 가능
+
 
 自己組織化指導（SOM)
 
@@ -118,9 +126,11 @@ Self Organizing Map (SOM)
 
 ** Simple click game by using Processing
 
+
 * 데이터 수집
 
 ** 프로세싱을 이용한 간단한 정확도 연습 게임 
+
 
 * データ収集
 
@@ -138,21 +148,13 @@ Self Organizing Map (SOM)
 
 - Organize the saved dataset by user
 
-- Data:
- 
- -- Three users
- 
- -- 200 game play data by user
+- Three users play 200 game data by each user
  
 - Use the program named "Living for SOM"
 
 - SOM setting:
 
--- 40 number of trainings
-
--- 0.6 learning rate
-
--- 0.1 neighbor width
+- 40 number of trainings, 0.6 learning rate, 0.1 neighbor width
 
 
 * 군집화
@@ -199,6 +201,7 @@ Self Organizing Map (SOM)
 -- Need more behavioral aspects to consider
 
 
+
 - SOM은 데이터의 집합을 클러스터링 하여 구분하는데 강점이 있다
 
 -- 하지만 유저 인증을 가능하게 할 정도의 정확성을 보여주지 못함
@@ -211,6 +214,7 @@ Self Organizing Map (SOM)
 - 하나 혹은 두개의 행동적 측면은 생체 인식으로는 부족한면을 보인다
 
 -- 다른 추가적 행동적 측면이 필요할 것으로 생각됨
+
 
 
 - SOMはデータの集合をクラスタリングして区分することに強みがある
