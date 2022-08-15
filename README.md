@@ -25,6 +25,7 @@ But, relatively few number of detecting the unauthenticated user such as the act
 The necessity of second authentication is emerging.
 
 
+
 날이 갈수록 게임은 사람들에게 단순한 유희를 넘는 의미를 가지며 또 하나의 세상으로 여겨지기도 합니다.
 
 게이머들은 특히 게임의 공평성을 매우 중요하게 생각해 게임의 공평성을 해치는 행위인 봇, 핵, 혹은 대리 (게임을 다른 사람이 대신 해주는 행위)같은 행위에 분노를 느끼기도 합니다.
@@ -32,6 +33,7 @@ The necessity of second authentication is emerging.
 그러나 상대적으로 핵과 봇을 잡는 기술은 많은 발전과 여러 방식이 있지만 대리를 적발하는 방식은 아직까지 미흡한 경우가 많습니다.
 
 대리 행위를 방지하기 위한 이중 인증의 필요가 늘어가고 있습니다.
+
 
 
 最近、ゲームは人に単純な遊戯を越える意味を持ち、もう一つの世の中と見なされることもあります。
