@@ -53,6 +53,11 @@ Possible to certify the user
 
 - 플레이어에게 최대한의 방해, 인식, 혹은 스트레스를 줄이는 것이 중요합니다.
 
+提案する方法は主な認証方式ではなく本人認証を補完するシステムでゲームユーザーの行動的側面を測定（生体測定）してゲーム中他の装備や要求なしにゲームプレイヤーを確認することです
+
+- プレイヤーに妨害、認識、またはストレスを最大限に減らすことが大事です。
+
+
 
 ## The diagram of the idea
 
@@ -62,15 +67,15 @@ Possible to certify the user
 
 ## Factors to be measured (and for future study):
 
-1. Reaction Time  반응 속도
+1. Reaction Time  반응 속도  反応速度
 
-2. Accuracy  정확도
+2. Accuracy  정확도  正確度
 
-(3). Click per minute  매분마다의 클릭 숫자
+(3). Click per minute  매분마다의 클릭 숫자  毎分ごとのクリック数
 
-(4). Keyboard settting  키보드 세팅
+(4). Keyboard settting  키보드 세팅  キーボードセティング
 
-(5). Social activity  게임 내에서의 사회적 활동
+(5). Social activity  게임 내에서의 사회적 활동  ゲームの中での社会的な活動
 
 
 ## Data Flow Diagram:
@@ -97,6 +102,12 @@ Self Organizing Map (SOM)
 
 * 2차원 공간에 고차원 데이터 세트 표시 가능
 
+自己組織化指導（SOM)
+
+* 非指導学習を利用する人工神経網中の一つ
+
+* 2次元空間に高次元のデータを表紙可能
+
 
 <img width="438" alt="스크린샷 2022-08-11 오후 8 19 18" src="https://user-images.githubusercontent.com/90700648/184122148-6a1b9bf1-8d78-4e29-a43f-6f9fb6c9ee39.png">
 
@@ -111,6 +122,9 @@ Self Organizing Map (SOM)
 
 ** 프로세싱을 이용한 간단한 정확도 연습 게임 
 
+* データ収集
+
+** プロセシングを利用した簡単な正確度練習ゲーム
 
 <img width="390" alt="스크린샷 2022-08-11 오후 8 20 21" src="https://user-images.githubusercontent.com/90700648/184122341-087a6645-e6c0-49fd-872d-bfd0d9f9a52f.png">
 
@@ -152,6 +166,16 @@ Self Organizing Map (SOM)
 - 40번의 반복, 0.6 학습률, 0.1의 폭을 사용
 
 
+* 群集化
+
+- ユーザーごとに収集したデータを整理
+
+- 3人のユーザーから各々200回のゲームプレイ、総合2000の反応速度、正確度記録
+
+- ‘Living for SOM’という名前のプログラムを使用
+
+- 40回の反復、0.6の学習率、0.1の幅を使う
+
 
 ## Result
 
@@ -187,3 +211,17 @@ Self Organizing Map (SOM)
 - 하나 혹은 두개의 행동적 측면은 생체 인식으로는 부족한면을 보인다
 
 -- 다른 추가적 행동적 측면이 필요할 것으로 생각됨
+
+
+- SOMはデータの集合をクラスタリングして区分することに強みがある
+
+-- しかしユーザー認証へ使うほどの正確度を示していない
+
+-- 他の技術やインプットが必要そうだ
+
+-- クラスターの境界設定への詳しい研究必要
+
+
+- 一つ二つの行動的な側面は生体認証に足りない面を見せる
+
+-- 他の追加的なインプットが必要なものと思われる
