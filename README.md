@@ -4,7 +4,7 @@ This project has been started from the idea that is it possible to identify the 
 Korean and Japanese descriptions are followed by the English.
 
 
-이 프로젝트는 플레이어의 게임 습관 혹은 게임 패턴으로 본인 확인이 가능한지에 대한 궁금증으로 시작하였습니다.
+이 프로젝트는 플레이어의 게임 습관 혹은 게임 패턴으로 본인 확인이 가능한지에 대한 아이디어에서 출발하였습니다.
 
 
 このプロジェクトは、プレイヤーのゲーム習慣またはゲームパターンで本人確認が可能かどうかの疑問から始まりました。
