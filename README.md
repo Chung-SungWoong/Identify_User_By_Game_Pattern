@@ -104,12 +104,32 @@ Self Organizing Map (SOM)
 
 * Display high dimensional dataset into 2-dimensional space
 
+* Use a neighborhood function to preserve the topological spacial properties.
+
+* It starts with initialize the weight vectors these vectors are searched to find which weight best represents that sample.
+
 
 자기조직화 지도 (SOM)
 
 * 비지도 학습을 이용한 인공신경망 중 하나
 
 * 2차원 공간에 고차원 데이터 세트 표시 가능
+
+*  '자기조직화 (Self Organizing)' 란 주어진 입력패턴에 대하여 정확한 해답을 미리 주지 않고 자기 스스로 학습할 수 있는 능력을 말한다. 
+
+일반적으로 이러한 네트워크들은 신경생리학 (neurophysiology) 적인 시스템을 본따서 모델링한 것이다
+
+
+SOM 은 출력 map 에 자신의 물리적 위치를 가지고, 승자독식 (winner-take-all) 과정에 참여하는 인공 뉴런의 집합이란 의미로 가장 쉽게 설명된다. 
+
+일종의 경쟁신경망 (competitive network) 인 winner-take-all 과정은 입력벡터에 가장 가까운 가중치 벡터를 가지는 노드를 승자 (winner) 로 선언하고, 그 값이 입력벡터에 더 가까워지도록 가중치가 조정된다. 
+
+각 노드는 이웃의 집합을 가진다. 이러한 노드가 경쟁에서 이길 때 이웃의 가중치도 변화된다. 그들이 똑같이 변화되지는 않는다. 
+
+이웃이 winner 에서 멀어질수록 그 가중치는 더 작게 변화된다. 
+
+이러한 과정이 각 입력벡터에 대해 반복되어 많은 cycle 을 수행한다. 입력이 달라지면 winner 도 달라진다. 
+
 
 
 自己組織化指導（SOM)
