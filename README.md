@@ -100,13 +100,16 @@ Possible to certify the user
 
 Self Organizing Map (SOM)
 
-* One of Artificial neural network using unsupervised learning
+* Sort of Artificial neural network using unsupervised learning
 
-* Display high dimensional dataset into 2-dimensional space
+* Display high-dimensional dataset into 2-dimensional space
 
-* Use a neighborhood function to preserve the topological spacial properties.
+* The winner-take-all process, a sort of competitive neural network, choose a node closest to the input vector as a winner and adjust the weight so that the winner is closer to the input vector.
 
-* It starts with initialize the weight vectors these vectors are searched to find which weight best represents that sample.
+* Each node is related to the neighbors, so when a node wins a competition, the weight of the neighbor's node also changes, however, the changing value gets smaller as the neighbor is far away from the winner.
+
+* This process will be repeated for each input vector.
+
 
 
 자기조직화 지도 (SOM)
@@ -115,21 +118,11 @@ Self Organizing Map (SOM)
 
 * 2차원 공간에 고차원 데이터 세트 표시 가능
 
-*  '자기조직화 (Self Organizing)' 란 주어진 입력패턴에 대하여 정확한 해답을 미리 주지 않고 자기 스스로 학습할 수 있는 능력을 말한다. 
+*  일종의 경쟁신경망 (competitive network) 인 winner-take-all 과정은 입력벡터에 가장 가까운 가중치 벡터를 가지는 노드를 승자 (winner) 로 선언하고, 그 값이 입력벡터에 더 가까워지도록 가중치가 조정된다. 
 
-일반적으로 이러한 네트워크들은 신경생리학 (neurophysiology) 적인 시스템을 본따서 모델링한 것이다
+* 각 노드는 이웃의 집합을 가지므로 노드가 경쟁에서 이길 때 이웃의 가중치도 함께 변화되지만 이웃이 winner 에서 멀어질수록 그 가중치는 더 작게 변화된다. 
 
-
-SOM 은 출력 map 에 자신의 물리적 위치를 가지고, 승자독식 (winner-take-all) 과정에 참여하는 인공 뉴런의 집합이란 의미로 가장 쉽게 설명된다. 
-
-일종의 경쟁신경망 (competitive network) 인 winner-take-all 과정은 입력벡터에 가장 가까운 가중치 벡터를 가지는 노드를 승자 (winner) 로 선언하고, 그 값이 입력벡터에 더 가까워지도록 가중치가 조정된다. 
-
-각 노드는 이웃의 집합을 가진다. 이러한 노드가 경쟁에서 이길 때 이웃의 가중치도 변화된다. 그들이 똑같이 변화되지는 않는다. 
-
-이웃이 winner 에서 멀어질수록 그 가중치는 더 작게 변화된다. 
-
-이러한 과정이 각 입력벡터에 대해 반복되어 많은 cycle 을 수행한다. 입력이 달라지면 winner 도 달라진다. 
-
+* 이러한 과정이 각 입력벡터에 대해 반복되어 많은 cycle 을 수행한다.  
 
 
 自己組織化指導（SOM)
@@ -137,6 +130,13 @@ SOM 은 출력 map 에 자신의 물리적 위치를 가지고, 승자독식 (w
 * 非指導学習を利用する人工神経網中の一つ
 
 * 2次元空間に高次元のデータを表紙可能
+
+* 一種の競争神経網(competitive network)であるwinner-take-allは入力ベクトルに最も近い加重値ベクトルを持つノードを勝者(winner)と宣言し、その値が入力ベクトルにより近づくよう加重値が調整される。
+
+* 各ノードは隣人の集合を持つため、ノードが競争で勝つ時、隣人の加重値も共に変化するが、隣人がwinnerから遠ざかるほど、その加重値はさらに小さく変化する。
+
+* このような過程が各入力ベクトルに対して繰り返され、多くのcycleを遂行する。
+
 
 
 <img width="438" alt="스크린샷 2022-08-11 오후 8 19 18" src="https://user-images.githubusercontent.com/90700648/184122148-6a1b9bf1-8d78-4e29-a43f-6f9fb6c9ee39.png">
