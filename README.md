@@ -238,6 +238,9 @@ Self Organizing Map (SOM)
 -- 다른 추가적 행동적 측면이 필요할 것으로 생각됨
 
 
+- Trajectory how the mouse move
+-- longterm game play -> is there change of performance?
+
 
 - SOMはデータの集合をクラスタリングして区分することに強みがある
 
