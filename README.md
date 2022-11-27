@@ -201,10 +201,37 @@ Self Organizing Map (SOM)
 - 40回の反復、0.6の学習率、0.1の幅を使う
 
 
+* Clasficication
+
+- Use multiclassification method to classificy the user with multiple class
+
+- In this dataset, the accuracy and reaction time is set as a x data and user is y data
+
+- Use one-hot-encoding for y data
+
+- Input layer with 16 node use relu activation, hidden layer 8 node use relu activation, output layer 3 node with sigmoid
+
+
+* 분류
+
+- 데이터셋에 두개 이상의 클래스가 있으므로 다중 분류를 사용하여 유저 구분
+
+- 데이터셋중 정확도와 반응속도를 x값으로 유저를 y값으로 설정
+
+- 원 핫 인코딩으로 y 데이터셋 변환
+
+- 인풋 레이어 16개의 노드로 relu 사용, 히든 레이어 8개의 노드로 relu, 아웃풋 레이어 3개의 노드 sigmoid 사용
+
+
+
+
 ## Result
 
 
 <img width="629" alt="스크린샷 2022-08-11 오후 8 26 13" src="https://user-images.githubusercontent.com/90700648/184123306-32ad6edc-da92-4e43-8630-939cc4387a1d.png">
+
+
+- 다중 분류를 통해 50%의 accuracy 
 
 
 ## Limitation and Future Work
