@@ -31,6 +31,7 @@ x_train, x_test, y_train,y_test = train_test_split(x,Y_encoded,test_size = 0.3, 
 
 model = Sequential()
 model.add(Dense(16,input_dim=2,activation='relu'))
+model.add(Dense(8,activation='relu'))
 model.add(Dense(3,activation='sigmoid'))
 
 
