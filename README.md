@@ -231,7 +231,14 @@ Self Organizing Map (SOM)
 <img width="629" alt="스크린샷 2022-08-11 오후 8 26 13" src="https://user-images.githubusercontent.com/90700648/184123306-32ad6edc-da92-4e43-8630-939cc4387a1d.png">
 
 
-- 다중 분류를 통해 50%의 accuracy 
+<img width="147" alt="스크린샷 2022-11-28 오후 3 48 39" src="https://user-images.githubusercontent.com/90700648/204411811-6c20b432-57b6-49ef-96cc-3043bfd0d6bd.png">
+
+
+- Get 50% of accuracy from multiclassification
+
+- 다중 분류를 통해 50%의 정확도를 흭득
+
+- 複数分類を使用し、50％の正確度を得る
 
 
 ## Limitation and Future Work
