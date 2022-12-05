@@ -288,3 +288,17 @@ Self Organizing Map (SOM)
 - 一つ二つの行動的な側面は生体認証に足りない面を見せる
 
 -- 他の追加的なインプットが必要なものと思われる
+
+
+## Further Study
+
+- FPS game  
+
+
+-- Mouse Movement + alpha
+
+
+-- for FPS, map can be the variant for change keystroke dynamics. 
+
+
+-- Another aspect can be used for combine with the mouse dynamics
