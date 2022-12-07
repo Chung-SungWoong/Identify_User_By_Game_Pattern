@@ -1,4 +1,4 @@
-"""
+
 from pynput.keyboard import Listener  as KeyboardListener
 from pynput.mouse    import Listener  as MouseListener
 from pynput.keyboard import Key
@@ -13,6 +13,19 @@ def end_rec(key):
 def on_press(key):
     logging.info(str(key))
 
+current_pressed = set()
+
+def on_press(key):
+    current_pressed.add(key)
+    logging.info("key %s pressed: " %key)
+
+
+def on_release(key):
+    logging.info("key %s released: " %key)
+
+    if key in current_pressed:
+        current_pressed.remove(key)    
+
 def on_move(x, y):
     logging.info("Mouse moved to ({0}, {1})".format(x, y))
 
@@ -20,17 +33,16 @@ def on_click(x, y, button, pressed):
     if pressed:
         logging.info('Mouse clicked at ({0}, {1}) with {2}'.format(x, y, button))
 
-def on_scroll(x, y, dx, dy):
-    logging.info('Mouse scrolled at ({0}, {1})({2}, {3})'.format(x, y, dx, dy))
+
 
 with MouseListener(on_click=on_click) as listener:
     with KeyboardListener(on_press=on_press) as listener:
         listener.join()
-"""
 
+"""
 from pynput.mouse import Controller as mouse_control
 from pynput.mouse import Listener as MouseListener
-from pynput.keyboard import Listener  as KeyboardListener
+from pynput.keyboard import Listener as KeyboardListener
 
 from pynput import keyboard as key_control
 import time
@@ -50,8 +62,4 @@ with MouseListener(on_click=on_click) as listener:
 
 listener = key_control.Listener(on_press=on_press, on_click = on_click) #keyboard listener
 listener.start()
-
-while True :
-    command = mouse.position
-    print(command)
-    time.sleep(0.2)
+"""
