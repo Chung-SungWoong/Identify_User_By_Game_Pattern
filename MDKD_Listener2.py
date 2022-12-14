@@ -4,18 +4,34 @@ from pynput.keyboard import Listener as KeyboardListener
 from datetime import datetime
 import pyautogui
 import time
+import logging
 global last_x, last_y, last_t
 
 # Define the functions for the mouse and keyboard listeners
 
+logging.basicConfig(filename=("log.txt"), level=logging.DEBUG, format='%(asctime)s: %(message)s')
+
+def end_rec(key):
+    logging.info(str(key))
+
 def on_click(x, y,button, pressed):
     print('{0} at {1}'.format('Pressed' if pressed else 'Released', (x, y)))
+    if pressed:
+        logging.info('Mouse clicked at ({0}, {1}) with {2}'.format(x, y, button))
 
 def on_press(key):
     print('{0} pressed'.format(key))
+    current_pressed.add(key)
+    logging.info("key %s pressed: " %key)
+
+current_pressed = set()
 
 def on_release(key):
     print('{0} release'.format(key))
+    logging.info("key %s released: " %key)
+
+    if key in current_pressed:
+        current_pressed.remove(key)  
     
 
 # Set up the mouse and keyboard listeners
@@ -45,4 +61,5 @@ with MouseListener(on_click=on_click) as mouse_listener:
             # Calculate the velocity and acceleration
             velocity = (dx**2 + dy**2)**0.5 / dt
             acceleration = velocity / dt
+            logging.info("Mouse moved to ({0}, {1})".format(x, y))
             print('{0},velocity {1:.2f}, acceleration {2:.2f}, Date:{3}'.format((x, y), velocity, acceleration, s))
