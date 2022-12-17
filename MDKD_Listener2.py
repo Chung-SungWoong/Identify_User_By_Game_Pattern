@@ -1,6 +1,7 @@
 # Import the pynput library and time module
 from pynput.mouse import Listener as MouseListener
 from pynput.keyboard import Listener as KeyboardListener
+from pynput import keyboard
 from datetime import datetime
 import pyautogui
 import time
@@ -15,14 +16,17 @@ def end_rec(key):
     logging.info(str(key))
 
 def on_click(x, y,button, pressed):
-    print('{0} at {1}'.format('Pressed' if pressed else 'Released', (x, y)))
+    print('{0} at {1}'.format('clicked' if pressed else 'Released', (x, y)))
     if pressed:
-        logging.info('Mouse clicked at ({0}, {1}) with {2}'.format(x, y, button))
+        logging.info('{0} at {1}'.format('clicked' if pressed else 'Released', (x, y)))
 
 def on_press(key):
     print('{0} pressed'.format(key))
     current_pressed.add(key)
     logging.info("key %s pressed: " %key)
+
+    if key == keyboard.Key.esc:
+        exit(0)
 
 current_pressed = set()
 
@@ -46,7 +50,7 @@ with MouseListener(on_click=on_click) as mouse_listener:
         # Log the mouse position every 0.5 seconds
         while True:
             time.sleep(0.5)
-            s = datetime.fromtimestamp(time.time())
+            # s = datetime.fromtimestamp(time.time())
             t = time.perf_counter()
             x, y = pyautogui.position()
             dt = t - last_t
@@ -62,4 +66,11 @@ with MouseListener(on_click=on_click) as mouse_listener:
             velocity = (dx**2 + dy**2)**0.5 / dt
             acceleration = velocity / dt
             logging.info("Mouse moved to ({0}, {1})".format(x, y))
-            print('{0},velocity {1:.2f}, acceleration {2:.2f}, Date:{3}'.format((x, y), velocity, acceleration, s))
+            logging.info("Velocity:{0:.2f}, Accerleation:{1:.2f}".format(velocity,acceleration))
+            # logging.info("Date:{0}".format(s))
+            print('saved')
+            if 'Key.esc' in current_pressed:
+                break
+
+
+            
