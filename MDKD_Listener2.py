@@ -10,16 +10,19 @@ global last_x, last_y, last_t
 
 # Define the functions for the mouse and keyboard listeners
 
+# Save the data file in the log.txt file
 logging.basicConfig(filename=("log.txt"), level=logging.DEBUG, format='%(asctime)s: %(message)s')
 
 def end_rec(key):
     logging.info(str(key))
 
+# Mouse clicked
 def on_click(x, y,button, pressed):
     print('{0} at {1}'.format('clicked' if pressed else 'Released', (x, y)))
     if pressed:
         logging.info('{0} at {1}'.format('clicked' if pressed else 'Released', (x, y)))
 
+# Keyboard pressed
 def on_press(key):
     print('{0} pressed'.format(key))
     current_pressed.add(key)
@@ -28,8 +31,11 @@ def on_press(key):
     if key == keyboard.Key.esc:
         exit(0)
 
+# Save the pressed button on the current_pressed set
 current_pressed = set()
 
+
+# Keyboard released 
 def on_release(key):
     print('{0} release'.format(key))
     logging.info("key %s released: " %key)
