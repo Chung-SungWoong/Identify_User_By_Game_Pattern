@@ -18,9 +18,9 @@ def end_rec(key):
 
 # Mouse clicked
 def on_click(x, y,button, pressed):
-    print('{0} at {1}'.format('clicked' if pressed else 'Released', (x, y)))
+    print(f'{int(x)} at {int(y)}'.format('clicked' if pressed else 'Released'))
     if pressed:
-        logging.info('{0} at {1}'.format('clicked' if pressed else 'Released', (x, y)))
+        logging.info(f'{int(x)} at {int(y)}'.format('clicked' if pressed else 'Released'))
 
 # Keyboard pressed
 def on_press(key):
