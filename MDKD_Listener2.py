@@ -4,9 +4,13 @@ from pynput.keyboard import Listener as KeyboardListener
 from pynput import keyboard
 from datetime import datetime
 import pyautogui
+import cv2
+import numpy as np
 import time
 import logging
 global last_x, last_y, last_t
+
+Counter = 0
 
 # Define the functions for the mouse and keyboard listeners
 
@@ -34,7 +38,6 @@ def on_press(key):
 # Save the pressed button on the current_pressed set
 current_pressed = set()
 
-
 # Keyboard released 
 def on_release(key):
     print('{0} release'.format(key))
@@ -55,7 +58,7 @@ with MouseListener(on_click=on_click) as mouse_listener:
 
         # Log the mouse position every 0.5 seconds
         while True:
-            time.sleep(0.5)
+            time.sleep(0.2)
             # s = datetime.fromtimestamp(time.time())
             t = time.perf_counter()
             x, y = pyautogui.position()
@@ -74,9 +77,9 @@ with MouseListener(on_click=on_click) as mouse_listener:
             logging.info("Mouse moved to ({0}, {1})".format(x, y))
             logging.info("Velocity:{0:.2f}, Accerleation:{1:.2f}".format(velocity,acceleration))
             # logging.info("Date:{0}".format(s))
+            # Should the screenshot be taken with different program by using multi thread? or will it be ok?
+            pyautogui.screenshot(rf'/Users/chung_sungwoong/Desktop/Practice/Identify_User_By_Game_Pattern/screenshot/SS{Counter}.png')
+            Counter += 1
             print('saved')
-            if 'Key.esc' in current_pressed:
+            if '0' in current_pressed:
                 break
-
-
-            
