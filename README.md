@@ -330,3 +330,8 @@ Self Organizing Map (SOM)
 
 
 -- 別の側面をマウスのダイナミクスと組み合わせることもできます
+
+
+## Current Situation
+
+- 
