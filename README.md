@@ -334,4 +334,6 @@ Self Organizing Map (SOM)
 
 ## Current Situation
 
-- 
+-- Need to get the permission of getting data from the game company 
+
+-- Build the code to get a keyboard and mouse dynamics
