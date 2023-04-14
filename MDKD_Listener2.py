@@ -56,7 +56,7 @@ with MouseListener(on_click=on_click) as mouse_listener:
 
         # Log the mouse position every 0.2 seconds
         while True:
-            time.sleep(0.2)
+            time.sleep(0.1)
             # s = datetime.fromtimestamp(time.time())
             t = time.perf_counter()
             x, y = pyautogui.position()
