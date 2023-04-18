@@ -76,9 +76,9 @@ with MouseListener(on_click=on_click) as mouse_listener:
             logging.info("Velocity:{0:.2f}, Accerleation:{1:.2f}".format(velocity,acceleration))
             # logging.info("Date:{0}".format(s))
             # Should the screenshot be taken with different program by using multi thread? or will it be ok?
-            """
+            
             pyautogui.screenshot(r'/Users/chung_sungwoong/Desktop/Practice/Identify_User_By_Game_Pattern/screenshot/SS{:.3f}.png'.format(time.time()))
             print('saved')
-            """
+            
             if 'esc' in current_pressed:
                 break
