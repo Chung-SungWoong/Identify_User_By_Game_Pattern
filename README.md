@@ -336,4 +336,8 @@ Self Organizing Map (SOM)
 
 -- Need to get the permission of getting data from the game company 
 
--- Build the code to get a keyboard and mouse dynamics
+-- Need to build a data collecting tool to be more concise and faster
+
+-- Searching for game that is offline and free FPS game
+
+-- Need to get more information to get know about how to utilize the screen data
