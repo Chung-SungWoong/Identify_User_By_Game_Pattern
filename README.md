@@ -341,3 +341,13 @@ Self Organizing Map (SOM)
 -- Searching for game that is offline and free FPS game
 
 -- Need to get more information to get know about how to utilize the screen data
+
+-- 1. Press long - aaaaaaa (Solved)
+
+-- 2. Divide the data by its type - such as move movement(MM), Click and Drag(CG), and Keyboard Dynamics (KD)
+
+-- 3. Need to ponder how to utilize the screenshoot
+
+-- 4. Which one to use, how to differentiate
+
+-- 5. Read more articles, the next presentation is on 5/30
