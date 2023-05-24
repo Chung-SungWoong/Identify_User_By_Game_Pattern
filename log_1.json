@@ -1,0 +1,374 @@
+{
+    "data": [
+        {
+            "event_id": 1,
+            "x": 1325,
+            "y": 76,
+            "velocity": 121.9356358327215,
+            "acceleration": 547.3096600942698,
+            "type": "move"
+        },
+        {
+            "event_id": 2,
+            "x": 934,
+            "y": 177,
+            "velocity": 2017.452690238226,
+            "acceleration": 10078.68110147938,
+            "type": "move"
+        },
+        {
+            "event_id": 3,
+            "x": 927,
+            "y": 180,
+            "velocity": 37.98188277973914,
+            "acceleration": 189.42573517363184,
+            "type": "move"
+        },
+        {
+            "event_id": 4,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 5,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 6,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 7,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 8,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 9,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 10,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 11,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 12,
+            "x": 927,
+            "y": 180,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 13,
+            "x": 685,
+            "y": 259,
+            "velocity": 1270.2356880616019,
+            "acceleration": 6338.177001207182,
+            "type": "move"
+        },
+        {
+            "event_id": 14,
+            "x": 687,
+            "y": 260,
+            "velocity": 11.110628802522143,
+            "acceleration": 55.206761882732714,
+            "type": "move"
+        },
+        {
+            "event_id": 15,
+            "x": 507,
+            "y": 340,
+            "velocity": 981.2511132123967,
+            "acceleration": 4888.149298921623,
+            "type": "move"
+        },
+        {
+            "event_id": 16,
+            "x": 696,
+            "y": 524,
+            "velocity": 1317.30676842111,
+            "acceleration": 6578.713856518582,
+            "type": "move"
+        },
+        {
+            "event_id": 17,
+            "x": 736,
+            "y": 318,
+            "velocity": 1042.562592671574,
+            "acceleration": 5179.649171809034,
+            "type": "move"
+        },
+        {
+            "event_id": 18,
+            "x": 572,
+            "y": 314,
+            "velocity": 817.0347172141218,
+            "acceleration": 4069.190619156687,
+            "type": "move"
+        },
+        {
+            "event_id": 19,
+            "x": 783,
+            "y": 464,
+            "velocity": 1285.9232937266286,
+            "acceleration": 6387.40825134895,
+            "type": "move"
+        },
+        {
+            "event_id": 20,
+            "x": 574,
+            "y": 508,
+            "velocity": 1064.2879647043715,
+            "acceleration": 5303.406808453272,
+            "type": "move"
+        },
+        {
+            "event_id": 21,
+            "x": 705,
+            "y": 368,
+            "velocity": 951.5796337625588,
+            "acceleration": 4722.768071040908,
+            "type": "move"
+        },
+        {
+            "event_id": 22,
+            "x": 751,
+            "y": 293,
+            "velocity": 436.7045016424155,
+            "acceleration": 2167.5883279784,
+            "type": "move"
+        },
+        {
+            "event_id": 23,
+            "x": 601,
+            "y": 328,
+            "velocity": 766.312081264048,
+            "acceleration": 3812.485796445889,
+            "type": "move"
+        },
+        {
+            "event_id": 24,
+            "x": 755,
+            "y": 458,
+            "velocity": 1004.8565306216664,
+            "acceleration": 5010.251693752547,
+            "type": "move"
+        },
+        {
+            "event_id": 25,
+            "x": 610,
+            "y": 471,
+            "velocity": 724.9159611995242,
+            "acceleration": 3609.681297651737,
+            "type": "move"
+        },
+        {
+            "event_id": 26,
+            "x": 748,
+            "y": 376,
+            "velocity": 825.1604587485962,
+            "acceleration": 4064.090281721659,
+            "type": "move"
+        },
+        {
+            "event_id": 27,
+            "x": 591,
+            "y": 293,
+            "velocity": 881.3754688953888,
+            "acceleration": 4374.2625150947115,
+            "type": "move"
+        },
+        {
+            "event_id": 28,
+            "x": 649,
+            "y": 444,
+            "velocity": 807.1083714504655,
+            "acceleration": 4027.2012616713205,
+            "type": "move"
+        },
+        {
+            "event_id": 29,
+            "x": 778,
+            "y": 438,
+            "velocity": 641.0473961085153,
+            "acceleration": 3182.15490174727,
+            "type": "move"
+        },
+        {
+            "event_id": 30,
+            "x": 778,
+            "y": 438,
+            "button": "Button.left",
+            "pressed": true,
+            "type": "click"
+        },
+        {
+            "event_id": 31,
+            "x": 778,
+            "y": 438,
+            "button": "Button.left",
+            "pressed": false,
+            "type": "click"
+        },
+        {
+            "event_id": 32,
+            "x": 778,
+            "y": 438,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 33,
+            "x": 767,
+            "y": 382,
+            "velocity": 284.1759604581011,
+            "acceleration": 1415.0304766588404,
+            "type": "move"
+        },
+        {
+            "event_id": 34,
+            "x": 745,
+            "y": 264,
+            "velocity": 599.0082902783291,
+            "acceleration": 2989.2608635725755,
+            "type": "move"
+        },
+        {
+            "event_id": 35,
+            "x": 745,
+            "y": 264,
+            "button": "Button.left",
+            "pressed": true,
+            "type": "click"
+        },
+        {
+            "event_id": 36,
+            "x": 745,
+            "y": 264,
+            "button": "Button.left",
+            "pressed": false,
+            "type": "click"
+        },
+        {
+            "event_id": 37,
+            "x": 745,
+            "y": 264,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 38,
+            "x": 745,
+            "y": 368,
+            "velocity": 517.0546653161355,
+            "acceleration": 2570.6300665882777,
+            "type": "move"
+        },
+        {
+            "event_id": 39,
+            "x": 745,
+            "y": 368,
+            "button": "Button.left",
+            "pressed": true,
+            "type": "click"
+        },
+        {
+            "event_id": 40,
+            "x": 745,
+            "y": 368,
+            "button": "Button.left",
+            "pressed": false,
+            "type": "click"
+        },
+        {
+            "event_id": 41,
+            "x": 745,
+            "y": 368,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 42,
+            "x": 745,
+            "y": 368,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 43,
+            "x": 745,
+            "y": 368,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        },
+        {
+            "event_id": 44,
+            "key": "Key.esc",
+            "type": "press",
+            "press_time": 9.226426187
+        },
+        {
+            "event_id": 45,
+            "key": "Key.esc",
+            "type": "release",
+            "release_time": 9.240156959
+        },
+        {
+            "event_id": 45,
+            "key": "Key.esc",
+            "type": "duration",
+            "duration": 0.013730772000000613
+        },
+        {
+            "event_id": 46,
+            "x": 745,
+            "y": 368,
+            "velocity": 0.0,
+            "acceleration": 0.0,
+            "type": "move"
+        }
+    ]
+}
