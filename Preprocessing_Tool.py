@@ -1,46 +1,51 @@
 import pandas as pd
 import json
-import numpy as np
 
-def preprocess_movement_data(df):
-    df = df.sort_values('timestamp')
+def process_data(data):
+    df = pd.DataFrame(data)
+    move_df = df[df['type'] == 'move'].sort_values('timestamp')
 
-    # calculate displacement
-    df['dx'] = df['x'].diff()
-    df['dy'] = df['y'].diff()
+    # Calculate speed in x and y direction
+    move_df['x_speed'] = move_df['x'].diff() / move_df['timestamp'].diff()
+    move_df['y_speed'] = move_df['y'].diff() / move_df['timestamp'].diff()
 
-    # calculate distance
-    df['distance'] = np.sqrt(df['dx']**2 + df['dy']**2)
+    # Calculate the jerk which is the rate of change of acceleration
+    move_df['jerk'] = move_df['acceleration'].diff() / move_df['timestamp'].diff()
 
-    # calculate velocity
-    df['dt'] = df['timestamp'].diff()
-    df['velocity'] = df['distance'] / df['dt']
+    # Calculate the angle of movement
+    move_df['angle'] = np.arctan2(move_df['y'].diff(), move_df['x'].diff())
 
-    # calculate acceleration
-    df['acceleration'] = df['velocity'].diff() / df['dt']
+    # Calculate curvature
+    move_df['curve'] = move_df['angle'].diff() / move_df['distance']
 
-    # Calculate elapsed time
-    df['elapsed_time'] = df['timestamp'].max() - df['timestamp'].min()
+    # Calculate the total elapsed time
+    move_df['elapsed_time'] = move_df['timestamp'].max() - move_df['timestamp'].min()
 
-    # Calculate total travelled distance
-    df['total_distance'] = df['distance'].sum()
+    # Calculate sum of angles
+    move_df['sum_of_angles'] = move_df['angle'].sum()
 
-    # Calculate average velocity and standard deviation
-    df['avg_velocity'] = df['velocity'].mean()
-    df['std_velocity'] = df['velocity'].std()
+    # Get starting timestamp of acceleration
+    move_df['accTimeatBeg'] = move_df.loc[move_df['acceleration'].first_valid_index(), 'timestamp']
 
-    # Calculate average acceleration and standard deviation
-    df['avg_acceleration'] = df['acceleration'].mean()
-    df['std_acceleration'] = df['acceleration'].std()
+    # Calculate trajectory length
+    move_df['traj_length'] = move_df['distance'].sum()
 
-    # End-to-end line
-    df['end_to_end_line'] = np.sqrt((df['x'].iloc[-1] - df['x'].iloc[0])**2 + 
-                                    (df['y'].iloc[-1] - df['y'].iloc[0])**2)
+    # Calculate means, std, min, max of the relevant columns
+    statistics = ['mean', 'std', 'min', 'max']
+    columns = ['x_speed', 'y_speed', 'velocity', 'acceleration', 'jerk', 'angle', 'curve']
+    stats_df = move_df[columns].agg(statistics)
 
-    # Efficiency
-    df['efficiency'] = df['end_to_end_line'] / df['distance'].sum()
+    # Flatten MultiIndex and convert to a dictionary
+    stats_dict = stats_df.to_dict()
 
-    return df
+    # Add additional stats
+    stats_dict['elapsed_time'] = move_df['elapsed_time'].iloc[-1]  # get the last value
+    stats_dict['sum_of_angles'] = move_df['sum_of_angles'].iloc[-1]  # get the last value
+    stats_dict['accTimeatBeg'] = move_df['accTimeatBeg'].iloc[0]  # get the first value
+    stats_dict['traj_length'] = move_df['traj_length'].iloc[-1]  # get the last value
+
+    return stats_dict
+
 
 # Load the data
 with open("C:\\Users\\is0482sf\\Desktop\\Data_Listener\\log_4.json") as f:
@@ -51,15 +56,8 @@ df = pd.DataFrame(data['data'])
 
 # Separate the data by event type
 df_move = df[df['type'] == 'move'].copy()
-df_click = df[df['type'] == 'click'].copy()
-df_press = df[df['type'] == 'press'].copy()
 
 # Preprocess the 'move' data
-df_move_processed = preprocess_movement_data(df_move)
+df_move_processed = process_data(df_move)
 
 print(df_move_processed)
-
-
-# TODO: Preprocess the 'click' and 'press' data as necessary
-# df_click_processed = preprocess_click_data(df_click)
-# df_press_processed = preprocess_press_data(df_press)
